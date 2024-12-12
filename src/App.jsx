@@ -97,7 +97,7 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <Link to="/" className="flex items-center">
-                <h1 className="text-white font-bold text-xl">{t('app.title')}</h1>
+                <h1 className="text-white font-bold text-xl">ATK</h1>
               </Link>
               <div className="flex items-center gap-6">
                 <Link
@@ -114,7 +114,7 @@ function App() {
                 </Link>
                 <button
                   onClick={() => setIsAuthorModalOpen(true)}
-                  className="px-4 py-2 bg-blue-500/20 hover:bg-blue-500/30 rounded-lg text-white transition-colors"
+                  className="text-blue-500 hover:text-blue-700 transition-colors"
                 >
                   {t('nav.about')}
                 </button>
