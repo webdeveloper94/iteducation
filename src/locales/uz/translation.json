@@ -1,0 +1,71 @@
+{
+  "app": {
+    "title": "Axborot texnologiyalari"
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "topics": "Mavzular",
+    "about": "Muallif haqida"
+  },
+  "home": {
+    "title": "Axborot Texnologiyalari",
+    "description": "Zamonaviy axborot texnologiyalari dunyosiga sayohat qiling va yangi bilimlarni interaktiv tarzda o'rganing",
+    "startButton": "Boshlash",
+    "features": {
+      "multilingual": {
+        "title": "Ko'p tilli",
+        "description": "O'zbek, rus va ingliz tillarida o'rganish imkoniyati"
+      },
+      "interactive": {
+        "title": "Interaktiv",
+        "description": "Video darslar, testlar va amaliy mashg'ulotlar"
+      },
+      "modern": {
+        "title": "Zamonaviy",
+        "description": "Eng so'nggi texnologiyalar haqida ma'lumotlar"
+      }
+    }
+  },
+  "topics": {
+    "kompyuter-tarixi": {
+      "title": "Kompyuter tarixi",
+      "description": "Kompyuterning paydo bo`lishi va rivojlanish tarixi",
+      "keyPoints": [
+        "Kompyuterning paydo bo`lishi",
+        "Birinchi kompyuterlar",
+        "Kompyuter avlodlari",
+        "Zamonaviy kompyuterlar"
+      ]
+    },
+    "kompyuter-qurilmalari": {
+      "title": "Kompyuter qurilmalari",
+      "description": "Kompyuterning asosiy va qo`shimcha qurilmalari",
+      "keyPoints": [
+        "Asosiy qurilmalar",
+        "Kiritish qurilmalari",
+        "Chiqarish qurilmalari",
+        "Saqlash qurilmalari"
+      ]
+    }
+  },
+  "buttons": {
+    "watchVideo": "Video darslik",
+    "viewPresentation": "Taqdimot",
+    "startQuiz": "Testni boshlash",
+    "close": "Yopish",
+    "back": "Orqaga"
+  },
+  "author": {
+    "title": "Muallif haqida",
+    "name": "Ismi",
+    "position": "Lavozimi",
+    "workplace": "Ish joyi",
+    "contact": "Bog'lanish"
+  },
+  "language": {
+    "select": "Tilni tanlang",
+    "uz": "O'zbek",
+    "ru": "Русский",
+    "en": "English"
+  }
+}

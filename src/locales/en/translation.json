@@ -1,0 +1,71 @@
+{
+  "app": {
+    "title": "Information Technology"
+  },
+  "nav": {
+    "home": "Home",
+    "topics": "Topics",
+    "about": "About"
+  },
+  "home": {
+    "title": "Information Technology",
+    "description": "Embark on a journey through the world of modern information technology and learn new knowledge interactively",
+    "startButton": "Get Started",
+    "features": {
+      "multilingual": {
+        "title": "Multilingual",
+        "description": "Learn in Uzbek, Russian, and English languages"
+      },
+      "interactive": {
+        "title": "Interactive",
+        "description": "Video tutorials, quizzes, and practical exercises"
+      },
+      "modern": {
+        "title": "Modern",
+        "description": "Information about the latest technologies"
+      }
+    }
+  },
+  "topics": {
+    "kompyuter-tarixi": {
+      "title": "Computer History",
+      "description": "The history of computer emergence and development",
+      "keyPoints": [
+        "Computer emergence",
+        "First computers",
+        "Computer generations",
+        "Modern computers"
+      ]
+    },
+    "kompyuter-qurilmalari": {
+      "title": "Computer Devices",
+      "description": "Main and peripheral computer devices",
+      "keyPoints": [
+        "Main devices",
+        "Input devices",
+        "Output devices",
+        "Storage devices"
+      ]
+    }
+  },
+  "buttons": {
+    "watchVideo": "Video tutorial",
+    "viewPresentation": "Presentation",
+    "startQuiz": "Start quiz",
+    "close": "Close",
+    "back": "Back"
+  },
+  "author": {
+    "title": "About Author",
+    "name": "Name",
+    "position": "Position",
+    "workplace": "Workplace",
+    "contact": "Contact"
+  },
+  "language": {
+    "select": "Select language",
+    "uz": "O'zbek",
+    "ru": "Русский",
+    "en": "English"
+  }
+}
