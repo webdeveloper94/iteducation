@@ -8,21 +8,25 @@
     "about": "About"
   },
   "home": {
-    "title": "Information Technology",
-    "description": "Embark on a journey through the world of modern information technology and learn new knowledge interactively",
-    "startButton": "Get Started",
+    "title": "Start Learning Computer Science",
+    "subtitle": "Learn computer science fundamentals through a modern and interactive platform",
+    "description": "Learn computer science fundamentals through our platform",
+    "getStarted": "Get Started",
+    "exploreTopics": "Explore Topics",
+    "viewGithub": "GitHub",
+    "startLearning": "Start Learning",
     "features": {
       "multilingual": {
         "title": "Multilingual",
-        "description": "Learn in Uzbek, Russian, and English languages"
+        "description": "All materials are available in Uzbek, Russian, and English"
       },
       "interactive": {
         "title": "Interactive",
-        "description": "Video tutorials, quizzes, and practical exercises"
+        "description": "Reinforce your knowledge through video lessons and quizzes"
       },
       "modern": {
         "title": "Modern",
-        "description": "Information about the latest technologies"
+        "description": "Get familiar with the latest technologies and approaches"
       }
     }
   },
@@ -48,9 +52,16 @@
       ]
     }
   },
+  "quiz": {
+    "completed": "Quiz completed!",
+    "score": "Your score",
+    "question": "Question",
+    "noQuestions": "No questions available for this topic"
+  },
   "buttons": {
     "watchVideo": "Video tutorial",
-    "viewPresentation": "Presentation",
+    "viewPDF": "View Topic Content",
+    "viewPresentation": "View Presentation",
     "startQuiz": "Start quiz",
     "close": "Close",
     "back": "Back"
@@ -61,6 +72,9 @@
     "position": "Position",
     "workplace": "Workplace",
     "contact": "Contact"
+  },
+  "common": {
+    "close": "Close"
   },
   "language": {
     "select": "Select language",

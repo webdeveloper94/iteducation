@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { quizData } from '../data/quizData';
+import { useTranslation } from 'react-i18next';
+import quizData from '../data/quizData';
 
 const QuizModal = ({ topicId, isOpen, onClose }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -8,8 +9,9 @@ const QuizModal = ({ topicId, isOpen, onClose }) => {
   const [showScore, setShowScore] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isAnswered, setIsAnswered] = useState(false);
+  const { i18n, t } = useTranslation();
 
-  const questions = quizData[topicId]?.questions || [];
+  const questions = quizData[topicId]?.[i18n.language]?.questions || [];
 
   useEffect(() => {
     if (isOpen) {
@@ -53,110 +55,81 @@ const QuizModal = ({ topicId, isOpen, onClose }) => {
     return 'bg-white/10';
   };
 
-  const restartQuiz = () => {
-    setCurrentQuestion(0);
-    setScore(0);
-    setShowScore(false);
-    setSelectedAnswer(null);
-    setIsAnswered(false);
-  };
-
-  if (!quizData[topicId]) {
-    return null;
-  }
-
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-          onClick={onClose}
-        >
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.8, opacity: 0 }}
-            className="relative w-full max-w-2xl bg-[#0a0a1f] rounded-2xl overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="bg-[#1a1a3a] rounded-xl shadow-xl w-full max-w-2xl p-6"
           >
-            {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-white/10">
-              <h2 className="text-xl font-bold text-white">
-                {quizData[topicId].title} - Test
-              </h2>
-              <button
-                onClick={onClose}
-                className="text-white/80 hover:text-white bg-white/10 rounded-lg p-2"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+            {showScore ? (
+              <div className="text-center">
+                <h2 className="text-2xl font-bold text-white mb-4">
+                  {t('quiz.completed')}
+                </h2>
+                <p className="text-xl text-white mb-6">
+                  {t('quiz.score')}: {score} / {questions.length}
+                </p>
+                <button
+                  onClick={onClose}
+                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-
-            {/* Quiz Content */}
-            <div className="p-6">
-              {showScore ? (
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-white mb-4">
-                    Test yakunlandi!
-                  </h3>
-                  <p className="text-xl text-white mb-6">
-                    Sizning natijangiz: {score} / {questions.length}
-                  </p>
+                  {t('common.close')}
+                </button>
+              </div>
+            ) : questions.length > 0 ? (
+              <>
+                <div className="flex justify-between items-center mb-6">
+                  <h2 className="text-xl font-bold text-white">
+                    {t('quiz.question')} {currentQuestion + 1} / {questions.length}
+                  </h2>
                   <button
-                    onClick={restartQuiz}
-                    className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                    onClick={onClose}
+                    className="text-white/60 hover:text-white"
                   >
-                    Qayta boshlash
+                    ✕
                   </button>
                 </div>
-              ) : (
-                <>
-                  <div className="mb-6">
-                    <div className="flex justify-between items-center mb-4">
-                      <span className="text-white/60">
-                        Savol {currentQuestion + 1} / {questions.length}
-                      </span>
-                      <span className="text-white/60">Ball: {score}</span>
-                    </div>
-                    <h3 className="text-xl text-white mb-6">
-                      {questions[currentQuestion].question}
-                    </h3>
-                    <div className="space-y-4">
-                      {questions[currentQuestion].options.map((option, index) => (
-                        <button
-                          key={index}
-                          onClick={() => handleAnswerClick(index)}
-                          disabled={isAnswered}
-                          className={`w-full p-4 text-left text-white rounded-lg transition-colors ${getOptionClassName(
-                            index
-                          )}`}
-                        >
-                          {option}
-                        </button>
-                      ))}
-                    </div>
+
+                <div className="mb-8">
+                  <p className="text-lg text-white mb-6">
+                    {questions[currentQuestion].question}
+                  </p>
+
+                  <div className="space-y-4">
+                    {questions[currentQuestion].options.map((option, index) => (
+                      <button
+                        key={index}
+                        onClick={() => handleAnswerClick(index)}
+                        disabled={isAnswered}
+                        className={`w-full p-4 text-left text-white rounded-lg transition-colors ${getOptionClassName(
+                          index
+                        )}`}
+                      >
+                        {option}
+                      </button>
+                    ))}
                   </div>
-                </>
-              )}
-            </div>
+                </div>
+              </>
+            ) : (
+              <div className="text-center">
+                <h2 className="text-2xl font-bold text-white mb-4">
+                  {t('quiz.noQuestions')}
+                </h2>
+                <button
+                  onClick={onClose}
+                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  {t('common.close')}
+                </button>
+              </div>
+            )}
           </motion.div>
-        </motion.div>
+        </div>
       )}
     </AnimatePresence>
   );

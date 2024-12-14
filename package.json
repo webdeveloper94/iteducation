@@ -16,6 +16,8 @@
     "framer-motion": "^11.14.1",
     "i18next": "^24.1.0",
     "i18next-browser-languagedetector": "^8.0.2",
+    "lite-youtube-embed": "^0.3.3",
+    "plyr-react": "^5.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-i18next": "^15.2.0",

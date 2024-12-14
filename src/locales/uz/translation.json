@@ -5,24 +5,28 @@
   "nav": {
     "home": "Bosh sahifa",
     "topics": "Mavzular",
-    "about": "Muallif haqida"
+    "about": "Biz haqimizda"
   },
   "home": {
-    "title": "Axborot Texnologiyalari",
-    "description": "Zamonaviy axborot texnologiyalari dunyosiga sayohat qiling va yangi bilimlarni interaktiv tarzda o'rganing",
-    "startButton": "Boshlash",
+    "title": "Kompyuter fanini oʻrganishni boshlang",
+    "subtitle": "Zamonaviy va interaktiv platforma orqali kompyuter fanining asoslarini o'rganing",
+    "description": "Bizning platformamiz orqali kompyuter fanining asoslarini o'rganing",
+    "getStarted": "Boshlash",
+    "exploreTopics": "Mavzularni ko'rish",
+    "viewGithub": "GitHub",
+    "startLearning": "O'rganishni boshlang",
     "features": {
       "multilingual": {
         "title": "Ko'p tilli",
-        "description": "O'zbek, rus va ingliz tillarida o'rganish imkoniyati"
+        "description": "Barcha materiallar o'zbek, rus va ingliz tillarida mavjud"
       },
       "interactive": {
         "title": "Interaktiv",
-        "description": "Video darslar, testlar va amaliy mashg'ulotlar"
+        "description": "Video darslar va testlar orqali bilimingizni mustahkamlang"
       },
       "modern": {
         "title": "Zamonaviy",
-        "description": "Eng so'nggi texnologiyalar haqida ma'lumotlar"
+        "description": "Eng so'nggi texnologiyalar va yondashuvlar bilan tanishing"
       }
     }
   },
@@ -48,6 +52,12 @@
       ]
     }
   },
+  "quiz": {
+    "completed": "Test yakunlandi!",
+    "score": "Sizning natijangiz",
+    "question": "Savol",
+    "noQuestions": "Bu mavzu uchun testlar mavjud emas"
+  },
   "buttons": {
     "watchVideo": "Video darslik",
     "viewPresentation": "Taqdimot",
@@ -61,6 +71,9 @@
     "position": "Lavozimi",
     "workplace": "Ish joyi",
     "contact": "Bog'lanish"
+  },
+  "common": {
+    "close": "Yopish"
   },
   "language": {
     "select": "Tilni tanlang",
